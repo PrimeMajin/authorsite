@@ -1,0 +1,379 @@
+
+* {
+    box-sizing:border-box; /*For most css projects. Allows adding padding and borders without having to add to the width of an element*/
+    margin:0; /*To reset margin and padding */
+    padding:0;
+}
+
+a {
+    color:white;
+    text-decoration:none;
+}
+
+/* Header */
+
+header {
+    background-image: url("img/scarybackground.jpeg");
+    position:sticky;
+    width: 100%;
+    border-bottom: solid 1px #062330;
+    background-blend-mode:multiply; /* To darken things and "lighten" to lighten things */
+    background-position-y: center;
+    background-size: cover;
+    background-color: rgba(6,35,48,0.4);
+  }
+
+  .authortext {
+    color:white;
+    z-index: 1;
+    padding:2rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .authortext h1 {
+      font-size:3rem;
+  }
+
+
+  img {
+      max-width: 100%;
+  } 
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+  }
+
+  /*It becomes tablet at 700px change img size */
+
+  .shifter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0rem 1rem;
+}
+
+.instructions {
+    text-align: center;
+}
+
+.freenovel h2{
+    color: #9d070f;
+    text-align: center;
+    margin:1rem 0rem;
+    font-size: xx-large;
+  }
+
+  .freenovel {
+    text-align: center;
+
+  }
+
+  #sucess-img {
+      transform: translate(33%, 0%);
+  }
+
+  .btn {
+    padding: 1.3rem;
+    color: white;
+    font-size: 1.2rem;
+    background-color:#9d070f;
+    border-radius: 5px;
+    border: none;
+    margin: 1rem 0rem;
+}
+
+.btn2 {
+    padding: 0.7rem 1rem;
+    color: white;
+    font-size: 1rem;
+    background-color:#9d070f;
+    border-radius: 5px;
+    border: none;
+    margin: 1rem 0rem;
+}
+
+
+.modal {
+    position:fixed;
+    top:50%; /* 50% on each side and then translate the negative 50% to move it to the center */
+    left:50%;
+    transform:translate(-50%, -50%) scale(0);  /* It'll make it invisible */
+    transition:200ms ease-in-out; /* so the transition is smoother */
+    border:1px solid black;
+    border-radius:10px;
+    z-index:10;
+    background-color:white;
+    width:500px;
+    max-width:80%;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);;
+}
+
+.modal-header {
+    padding: 1rem 1.5rem;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    border-bottom:1px solid black;
+}
+
+.modal-header .title {
+    font-size:2rem;
+    font-weight:bold;
+    text-align: center;
+    padding-left: 1rem;
+}
+
+.modal-header .close-button { /* For the close button */
+    cursor:pointer;
+    border:none;
+    outline:none;
+    background: none;
+    font-size:1.25rem;
+    font-weight:bold;
+}
+
+.modal-body {
+    padding:1rem 1.5rem;
+    line-height: 1rem;
+    
+}
+
+#email {
+    width:80%;
+    height:0%;
+    margin-top:1rem;
+}
+
+#overlay {
+    position:fixed; /* So it'll follow us around the site */
+    opacity:0;  /* So it doesnt show up by default */
+    top:0;  /* so it covers the screen */
+    left:0;
+    bottom:0;
+    right:0;
+    transition:200ms ease-in-out;
+    background-color:rgba(0,0,0, 0.5);  /* So it overlays */
+    pointer-events:none;  /* So we can click on buttons when overlay is not active */
+}
+
+#overlay.active {
+    opacity:1;  /* So we can toggle and untoggle the overlay */
+    pointer-events:all; 
+}
+
+#spam {
+    color:grey;
+    font-size: 0.8rem;
+    line-height: 1rem;
+}
+ 
+.btn1 {
+  padding: 1.3rem;
+  color: white;
+  font-size: 1.2rem;
+  background-color:#9d070f;
+  border-radius: 5px;
+  border: none;
+  margin: 1rem 0rem;
+}
+
+.btn1:hover{
+  background-color: #6b060b;
+  cursor: pointer;
+  font-size: 1.4rem;
+  transition:0.2s;
+}
+
+.btn {
+  transition:0.2s;
+}
+
+.btn:hover, .btn2:hover{
+  background-color: #6b060b;
+  cursor: pointer;
+  transition:0.5s;
+}
+
+
+.grid-container {
+    text-align: center;
+}
+
+.grid-container p {
+    padding: 0rem 1rem;
+}
+
+.blue {
+    color:white;
+    background-color: rgba(6,35,48);
+
+}
+
+
+footer {
+    text-align:center;
+    padding-top:1rem;
+    padding: 1rem 1rem;
+}
+
+.fa-brands {
+    padding: 0rem 1.5rem;
+    color:rgba(6,35,48);
+  }
+
+  #copyright {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      float:left;
+      font-size:medium;
+  }
+
+  @media only screen and (min-width:700px) {
+
+    img {
+        max-width:70%;
+    }
+
+    .fa-brands {
+        padding-top: 0.8rem;
+      }
+
+      #copyright {
+        padding-top: 2rem;
+      
+    }
+
+  }
+
+  @media only screen and (min-width:1000px) {
+
+    h2 {
+        padding-top:1.5rem;
+        text-align: center;
+    }
+
+    .blue p {
+        padding:0rem 2.5rem;
+    }
+
+    .white p {
+        padding-left:6rem;
+        padding-right:2.5rem;
+    }
+
+    .shifter-container p {
+        padding-left:0rem;
+        padding-right:2.5rem;
+        
+    }
+    .shifter-container img {
+        max-width:120%;
+    }
+
+    .blue img {
+        max-width:130%;
+    }
+
+    .white img {
+        max-width:150%;
+    }
+
+    .shifter-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .blue, 
+    .white {
+        display:flex;
+  
+    }
+
+    .madhouse-content, 
+    .seven-content, 
+    .heaven-content{
+        align-self:center;
+    }
+
+    .fa-brands {
+        float:right;
+      }
+
+}
+
+@media only screen and (min-width:1400px) {
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .freenovel h2 {
+        font-size: 3rem;
+    }
+
+    .blue img {
+        max-width:110%;
+    }
+
+    .white img {
+        max-width:130%;
+    } 
+
+    .shifter-container img {
+        max-width:100%;
+    }
+
+    .shifter-container,
+    .blue,
+    .white,
+    footer {
+        padding-left: 5rem;
+        padding-right:5rem;
+    }
+
+
+    .blue p,
+    .white p {
+    padding-left: 5rem;
+        padding-right:5rem;
+    }
+
+}
+
+@media only screen and (min-width:1600px) {
+
+    .shifter-container,
+    .blue,
+    .white,
+    footer  {
+        padding-left: 15rem;
+        padding-right:15rem;
+    }
+
+    .blue img {
+        max-width:140%;
+    }
+
+    .white img {
+        max-width:160%;
+    } 
+
+    .white p {
+    padding-left: 10rem;
+    padding-right:5rem;
+    }
+
+}
